@@ -65,8 +65,10 @@ pub mod convex_hull;
 pub use convex_hull::ConvexHull;
 
 /// Cross track distance
-pub mod cross_track_distance;
-pub use cross_track_distance::CrossTrackDistance;
+// pub mod cross_track_distance_geodesic;
+// pub use cross_track_distance_geodesic::CrossTrackDistanceGeodesic;
+pub mod cross_track_distance_haversine;
+pub use cross_track_distance_haversine::CrossTrackDistanceHaversine;
 
 /// Determine whether a `Coord` lies inside, outside, or on the boundary of a geometry.
 pub mod coordinate_position;
