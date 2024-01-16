@@ -30,6 +30,10 @@
   * <https://github.com/georust/geo/pull/1122>
 * POSSIBLY BREAKING: Minimum supported version of Rust (MSRV) is now 1.70
   * <https://github.com/georust/geo/pull/1134>
+* Add topological equality comparison method:
+  * <https://github.com/georust/geo/pull/1133>
+* Add docs to Relate trait
+  * <https://github.com/georust/geo/pull/1135>
 
 ## 0.27.0
 
@@ -75,7 +79,7 @@
 
 - Add `TriangulateEarcut` algorithm trait to triangulate polygons with the earcut algorithm.
   - <https://github.com/georust/geo/pull/1007>
-- Add `Vector2DOps` trait to algorithims module and implemented it for `Coord<T::CoordFloat>`
+- Add `Vector2DOps` trait to algorithms module and implemented it for `Coord<T::CoordFloat>`
   - <https://github.com/georust/geo/pull/1025>
 
 - Add a fast point-in-polygon query datastructure that pre-processes a `Polygon` as a set of monotone polygons. Ref. `crate::algorithm::MonotonicPolygons`.
