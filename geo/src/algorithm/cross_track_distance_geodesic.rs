@@ -75,7 +75,7 @@ impl CrossTrackDistanceGeodesic<f64> for Point<f64> {
 
             let (pa2_y, pa2_x) = geod.direct(lpa_y, lpa_x, azi1_ab, s_ax);
 
-            if s_ax.abs() < 1e-2 {
+            if s_ax.abs() < 1e-4 {
                 return s_ap;
             }
 
