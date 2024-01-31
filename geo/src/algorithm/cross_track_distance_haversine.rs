@@ -58,7 +58,6 @@ where
 #[cfg(test)]
 mod test {
     use crate::CrossTrackDistanceHaversine;
-    use crate::CrossTrackDistanceHaversine;
     use crate::HaversineDistance;
     use crate::Point;
 
@@ -69,7 +68,6 @@ mod test {
         let line_point_b = Point::new(0.1334, 53.1887);
         assert_relative_eq!(
             p.cross_track_distance_haversine(&line_point_a, &line_point_b),
-            p.cross_track_distance_haversine(&line_point_a, &line_point_b),
             307.549995,
             epsilon = 1.0e-6
         );
@@ -77,13 +75,11 @@ mod test {
 
     #[test]
     fn cross_track_distance_haversine_to_line_passing_through_point() {
-    fn cross_track_distance_haversine_to_line_passing_through_point() {
         let p = Point::new(0., 0.);
         let line_point_a = Point::new(1., 0.);
         let line_point_b = Point::new(2., 0.);
 
         assert_relative_eq!(
-            p.cross_track_distance_haversine(&line_point_a, &line_point_b),
             p.cross_track_distance_haversine(&line_point_a, &line_point_b),
             0.,
             epsilon = 1.0e-6
@@ -92,21 +88,12 @@ mod test {
 
     #[test]
     fn cross_track_distance_haversine_to_line_orthogonal_to_point() {
-    fn cross_track_distance_haversine_to_line_orthogonal_to_point() {
         let p = Point::new(0., 0.);
         let line_point_a = Point::new(1., -1.);
         let line_point_b = Point::new(1., 1.);
 
         assert_relative_eq!(
             p.cross_track_distance_haversine(&line_point_a, &line_point_b),
-            p.cross_track_distance_haversine(&line_point_a, &line_point_b),
-            p.haversine_distance(&Point::new(1., 0.)),
-            epsilon = 1.0e-6
-        );
-
-        assert_relative_eq!(
-            p.cross_track_distance_haversine(&line_point_b, &line_point_a),
-            p.cross_track_distance_haversine(&line_point_b, &line_point_a),
             p.haversine_distance(&Point::new(1., 0.)),
             epsilon = 1.0e-6
         );

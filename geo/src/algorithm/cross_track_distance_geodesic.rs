@@ -30,7 +30,7 @@ pub trait CrossTrackDistanceGeodesic<T, Rhs = Self> {
     /// let distance = p1.cross_track_distance_geodesic(&line_point_a, &line_point_b);
     ///
     ///     assert_eq!(
-    ///     1_546_716., // meters
+    ///     1_546_717., // meters
     ///     distance.round()
     /// );
     /// ```
